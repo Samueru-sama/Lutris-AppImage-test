@@ -25,7 +25,7 @@ run_install() {
 	pac --needed --noconfirm -S "${INSTALL_PKGS[@]}"
 
 	echo '== install glibc with patches for Easy Anti-Cheat (optionally)'
-	yes|pac -S glibc-eac lib32-glibc-eac
+	yes|pac -S glibc-eac
 
 	echo '== install debloated llvm for space saving (optionally)'
 	LLVM="https://github.com/pkgforge-dev/llvm-libs-debloated/releases/download/continuous/llvm-libs-mini-x86_64.pkg.tar.zst"
