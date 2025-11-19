@@ -10,7 +10,7 @@ export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}
 export RIM_ALLOW_ROOT=1
 URUNTIME="https://raw.githubusercontent.com/pkgforge-dev/Anylinux-AppImages/refs/heads/main/useful-tools/uruntime2appimage.sh"
 
-pacman -Syu --noconfirm zsync wget
+pacman -Syu --noconfirm zsync wget xvfb-run
 
 echo '== download base RunImage'
 curl -o runimage -L "https://github.com/VHSgunzo/runimage/releases/download/continuous/runimage-$(uname -m)"
