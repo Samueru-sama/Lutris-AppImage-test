@@ -77,10 +77,12 @@ export -f run_install
 RIM_OVERFS_MODE=1 RIM_NO_NVIDIA_CHECK=1 ./runimage bash -c run_install
 
 echo "----------------------------------------"
+echo "HOME is $HOME"
+echo "PWD is $PWD"
 find / -type f -name '*RunImage*' 2>/dev/null
 echo "----------------------------------------
 
-/root/temp.RunImage --runtime-extract
+./temp.RunImage --runtime-extract
 rm -f ./temp.RunImage
 mv ./RunDir ./AppDir
 mv ./AppDir/Run ./AppDir/AppRun
