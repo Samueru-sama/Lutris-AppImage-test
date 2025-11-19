@@ -14,8 +14,6 @@ echo '== download base RunImage'
 curl -o runimage -L "https://github.com/VHSgunzo/runimage/releases/download/continuous/runimage-$(uname -m)"
 chmod +x runimage
 
-export USER=${USER:-USER}
-
 run_install() {
 	set -e
 
@@ -77,7 +75,7 @@ run_install() {
 }
 export -f run_install
 RIM_OVERFS_MODE=1 RIM_NO_NVIDIA_CHECK=1 ./runimage bash -c run_install
-./temp.RunImage --runtime-extract
+/root/temp.RunImage --runtime-extract
 rm -f ./temp.RunImage
 mv ./RunDir ./AppDir
 mv ./AppDir/Run ./AppDir/AppRun
